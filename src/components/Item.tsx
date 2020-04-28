@@ -59,6 +59,7 @@ const Item: React.FC<Props> = ({ item, isDragging, fixed = false }) => {
           backgroundRepeat: "no-repeat",
           backgroundImage: `url(${thing.image})`,
           backgroundSize: `80%`,
+          userSelect: "none",
           pointerEvents: "none",
         }}
       />

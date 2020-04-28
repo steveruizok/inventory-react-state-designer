@@ -29,6 +29,7 @@ const SlotGhost: React.FC<Props> = ({ item, slot }) => {
           ? "var(--zh-goblin)"
           : "var(--zh-medium-carmine)",
         userSelect: "none",
+        pointerEvents: "none",
       }}
     ></div>
   )

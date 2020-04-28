@@ -17,6 +17,8 @@ const GridCell: React.FC<Props> = ({ x, y }) => {
       style={{
         backgroundColor: "var(--zh-don-juan)",
         border: `1px solid var(--zh-thunder)`,
+        userSelect: "none",
+        pointerEvents: "none",
       }}
     />
   )

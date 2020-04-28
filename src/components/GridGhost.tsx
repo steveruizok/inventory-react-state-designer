@@ -28,6 +28,7 @@ const GridGhost: React.FC<Props> = ({ item }) => {
           ? "var(--zh-goblin)"
           : "var(--zh-medium-carmine)",
         userSelect: "none",
+        pointerEvents: "none",
       }}
     />
   )

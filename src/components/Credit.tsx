@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from "react"
 
-type Props = {};
+type Props = {}
 
 const Credit: React.FC<Props> = () => {
   return (
@@ -30,7 +30,7 @@ const Credit: React.FC<Props> = () => {
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Credit;
+export default Credit
