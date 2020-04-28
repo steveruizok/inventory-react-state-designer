@@ -1,25 +1,25 @@
-import * as React from "react";
+import * as React from "react"
 
-import game from "./game";
-import { useStateDesigner } from "state-designer";
+import game from "./game"
+import { useStateDesigner } from "state-designer"
 
-import * as Shared from "./components/Shared";
-import Credit from "./components/Credit";
-import Slot from "./components/Slot";
-import SlotGhost from "./components/SlotGhost";
-import GridCell from "./components/GridCell";
-import Item from "./components/Item";
-import GridGhost from "./components/GridGhost";
+import * as Shared from "./components/Shared"
+import Credit from "./components/Credit"
+import Slot from "./components/Slot"
+import SlotGhost from "./components/SlotGhost"
+import GridCell from "./components/GridCell"
+import Item from "./components/Item"
+import GridGhost from "./components/GridGhost"
 
 function App() {
-  const { data, isIn } = useStateDesigner(game);
+  const { data, isIn } = useStateDesigner(game)
 
   // Static items
   const cells = React.useMemo(() => {
     return data.inventory.cells.map((row, y) =>
       row.map((_, x) => <GridCell key={`${y}_${x}`} x={21 + x} y={2 + y} />)
-    );
-  }, [data.inventory.cells.length]);
+    )
+  }, [data.inventory.cells.length])
 
   return (
     <Shared.Background>
@@ -66,7 +66,7 @@ function App() {
       </div> */}
       <Credit />
     </Shared.Background>
-  );
+  )
 }
 
-export default App;
+export default App

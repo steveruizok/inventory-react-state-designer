@@ -46,24 +46,24 @@ const game = createStateDesigner({
           to: "idle",
         },
       },
-      initial: "draggingGrid",
+      initial: "draggingOverGrid",
       onEnter: [
         {
           get: "draggingPoint",
           if: "isHoveringGrid",
-          to: "draggingGrid",
+          to: "draggingOverGrid",
         },
         {
-          to: "draggingSlots",
+          to: "draggingOverSlots",
         },
       ],
       states: {
-        draggingGrid: {
+        draggingOverGrid: {
           on: {
             DRAGGED_ITEM: {
               get: "draggingPoint",
               unless: "isHoveringGrid",
-              to: "draggingSlots",
+              to: "draggingOverSlots",
             },
             STOPPED_DRAGGING_ITEM: [
               {
@@ -121,12 +121,12 @@ const game = createStateDesigner({
             },
           },
         },
-        draggingSlots: {
+        draggingOverSlots: {
           on: {
             DRAGGED_ITEM: {
               get: "draggingPoint",
               if: "isHoveringGrid",
-              to: "draggingGrid",
+              to: "draggingOverGrid",
             },
           },
           initial: "valid",
