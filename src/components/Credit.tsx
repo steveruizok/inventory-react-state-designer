@@ -1,0 +1,36 @@
+import * as React from "react";
+
+type Props = {};
+
+const Credit: React.FC<Props> = () => {
+  return (
+    <div
+      style={{
+        padding: 32,
+        margin: "0 auto",
+        width: "fit-content",
+        display: "grid",
+        gridGap: 8,
+      }}
+    >
+      <div>
+        Built in <a href="https://reactjs.com/">React</a>
+      </div>
+      <div>
+        with <a href="https://statedesigner.com/">State Designer</a>
+      </div>
+      <div>
+        by <a href="https://twitter.com/steveruizok">@steveruizok</a>
+      </div>
+
+      <div style={{ marginTop: 16 }}>
+        >{" "}
+        <a href="https://github.com/steveruizok/inventory-react-state-designer">
+          View Source
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default Credit;
